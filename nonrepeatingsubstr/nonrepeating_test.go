@@ -40,7 +40,14 @@ func BenchmarkSubstr(b *testing.B) {
 	}
 	b.Logf("len(s) = %d", len(s))
 	ans := 8
+	// 重置计时器
 	b.ResetTimer()
+
+	// 停止计时器
+	b.StopTimer()
+
+	// 开始计时器
+	b.StartTimer()
 
 	for i := 0; i < b.N; i++ {
 		actual := lengthOfNonRepeatingSubStr(s)
