@@ -6,7 +6,7 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"filelisting"
+	"github.com/wenwu-bianjie/go-test/filelistingserver/filelisting"
 )
 
 type appHandler func(writer http.ResponseWriter,
